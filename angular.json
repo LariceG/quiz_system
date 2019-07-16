@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "alex-medical": {
+    "quiz-system": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/alex-medical",
+            "outputPath": "dist/quiz-system",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "alex-medical:build"
+            "browserTarget": "quiz-system:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "alex-medical:build:production"
+              "browserTarget": "quiz-systeml:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "alex-medical:build"
+            "browserTarget": "quiz-system:build"
           }
         },
         "test": {
@@ -103,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "alex-medical:serve"
+            "devServerTarget": "quiz-system:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "alex-medical:serve:production"
+              "devServerTarget": "quiz-system:serve:production"
             }
           }
         },
@@ -123,5 +123,5 @@
       }
     }
   },
-  "defaultProject": "alex-medical"
+  "defaultProject": "quiz-system"
 }

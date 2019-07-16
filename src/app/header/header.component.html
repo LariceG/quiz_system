@@ -1,0 +1,26 @@
+<header class="bg-dark">
+        <div class="container-fluid">
+            <div class="header-wrapper py-3 d-flex justify-content-between align-items-center">
+                <div class="left col-md-6">
+                    <div class="logo-wrapper d-flex align-items-center">
+                        <h3 class="text-white mb-0 font-weight-bold">
+                            Playboom</h3>
+                            <div class="px-3 ml-3 border-left position-relative parent-dropdown">
+                                <a href="#" class="dropdown-toggle lead link header-dropdown" data-toggle="dropdown"> <i class="fa fa-th-large"></i> Quiz</a>
+                                <div class="position-absolute dropdown-hover shadow-lg">
+                                    <div class="dropdown-hover-item"><a routerLink="/quiz-listing" class="link"> <i class="fa fa-list-ul"></i> &nbsp; Previous Quiz</a></div>
+                                    <div class=" dropdown-hover-item"><a routerLink="/create-quiz" class="link"> <i class="fa fa-plus ml-1"></i> &nbsp; Create New</a></div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="right col-md-6 d-flex flex-wrap align-items-center justify-content-end">
+
+                    <span class="profile-pic-wrapper mx-3">
+                        <img src="assets/images/user.png" alt="" class="">
+                    </span>
+                    <button class="btn btn-custom-sm roboto" (click)="logout()"> <i class="fa fa-sign-out"></i> Logout</button>
+                </div>
+            </div>
+        </div>
+    </header>

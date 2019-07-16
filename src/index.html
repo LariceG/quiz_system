@@ -1,14 +1,44 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>AlexMedical</title>
-  <base href="/">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+       
+        <title>Quiz System</title>
+        <style>
+        .invalid-feedback {
+            color: red;
+        }        
+        </style>
+    </head>
+<body class="tg-home tg-login">
   <app-root></app-root>
+   <!--Js files-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   <script>
+
+          $("#user").focus(function(){
+           $("#userIcon").addClass("active");
+          });
+
+          $("#pwd").focus(function(){
+          $("#pwdIcon").addClass("active");
+          });  
+          $("#user").focus(function(){
+           $("#pwdIcon").removeClass("active");
+          });
+
+          $("#pwd").focus(function(){
+          $("#userIcon").removeClass("active");
+          });  
+
+  </script>
 </body>
+
 </html>

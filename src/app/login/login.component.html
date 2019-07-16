@@ -1,0 +1,48 @@
+<div class="body-wrapper">
+        <div class="login-wrapper rounded  shadow-lg col-md-4 py-4 px-5">
+              <div class="login-content">
+                  <div class="login-heading d-flex justify-content-center">
+                      <p class="display-4 text-dark ">Login</p>
+                  </div>
+                  <div class="col-md-12 py-4">
+                    <div *ngIf="loginErrorMessage" class="alert alert-danger text-center">
+                            {{loginErrorMessage}}
+                        </div>
+                        <div *ngIf="loginSuccessMessage" class="alert alert-success text-center">
+                                {{loginSuccessMessage}}
+                    </div>  
+                    <form class="h-100" method="post" name="form" (ngSubmit)="l.form.valid && login()" #l="ngForm" novalidate>
+                          <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group position-relative">
+                                    <span class="position-absolute input-icon" id="userIcon">
+                                        <i class="fa fa-user text-secondary" ></i>
+                                    </span>      
+                                    <input type="email" name="login_email" id="user" class="form-control" autocomplete="off" placeholder="Email Address" [(ngModel)]="model.login_email" #login_email="ngModel" [ngClass]="{ 'is-invalid': l.submitted && login_email.invalid }" required email />
+                                    <div *ngIf="l.submitted && login_email.invalid" class="invalid-feedback">
+                                    <div *ngIf="login_email.errors.required">Email is required</div>
+                                    <div *ngIf="login_email.errors.email">Email must be a valid email address</div>
+                                    </div>                          
+                                </div>
+                            </div>
+                            <div class="col-md-12 mt-4">
+                                    <div class="form-group position-relative">
+                                        <span class="position-absolute input-icon" id="pwdIcon" > 
+                                            <i class="fa fa-lock text-secondary" ></i>
+                                        </span>      
+                                        <input type="password" autocomplete="off" id="pwd" name="login_password" class="form-control" placeholder="Password" [(ngModel)]="model.login_password" #login_password="ngModel" [ngClass]="{ 'is-invalid': l.submitted && login_password.invalid }" required />
+                                        <div *ngIf="l.submitted && login_password.invalid" class="invalid-feedback">
+                                        <div *ngIf="login_password.errors.required">Password is required</div>
+                                        </div>                              
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-center col-md-12 mt-5">
+                                    <button type="submit" class="btn btn-custom"> <i class="fa fa-arrow-circle-right"></i> &nbsp; Continue </button>
+                                </div>
+                          </div>
+                      </form>
+                  </div>
+              </div>          
+        </div>
+    </div>

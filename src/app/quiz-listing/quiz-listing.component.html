@@ -1,0 +1,48 @@
+<section id="previousquiz " class="my-5">
+    <div class="container bg-white">
+        <div class="previousquiz-wrapper   bg-white shadow-lg">
+            <div class="list-heading py-3 bg-light ">
+                <div class="col-md-12 d-flex justify-content-between align-items-center">
+                    <h3 class="mb-0">Previous Quiz Listing </h3>
+                    <a routerLink="/create-quiz"><button type="button" class="btn btn-custom-sm"> <i class="fa fa-plus"></i> Create New Quiz </button></a>
+                </div>
+            </div>
+            <div class="table-outer ">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr class="table-result">
+                            <th class="">Question</th>
+                            <th>True Answers</th>
+                            <th>Total Answers</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let quiz of quiz">
+                            <td>{{quiz.question}}</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>
+                                <a routerLink="/quiz-detail/{{quiz.id}}"><button type="button" class="btn btn-outline-dark btn-sm"> <i class="fa fa-eye"></i> View
+                                </button></a>
+                               
+                                <button (click)="deleteQuestion(quiz.id);" type="button" class="btn btn-danger btn-sm  ml-1"> <i class="fa fa-trash"></i> Delete
+                                </button>
+                            </td>
+                        </tr>
+                      
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-12 d-flex justify-content-end">
+                    <!--ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-left"></i></a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-right"></i></a></li>
+                          </ul-->
+            </div>
+        </div>
+    </div>
+</section>

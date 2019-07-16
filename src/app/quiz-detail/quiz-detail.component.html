@@ -1,0 +1,95 @@
+<section id="dashboard-content ">
+    <div class="container">
+        <div class="main-button-outer   pt-5">
+            <div class="svg-bg position-absolute">
+                <object type="image/svg+xml" data="assets/images/svg.svg"></object>
+            </div>
+
+            
+        </div>
+    </div>
+</section>
+
+<section id="create-quiz" class="my-4 d-block" style="top: 0;height: auto;opacity: 1">
+
+    <div class="container">
+          
+                    <div class="row no-gutters">
+                        <div class="col-md-10 offset-md-1  border rounded quiz-form-wrapper bg-light shadow-lg ">
+                            
+                            <div class="quiz-heading py-3 bg-grad px-2">
+                                <h3 class="mb-0 text-white">Quiz Detail</h3>
+                            </div>
+                            <div class="col-md-10 my-4 offset-md-1">
+                                <!--div class="quiz-titile-wrapper ">
+                                   <div class="form-group position-relative">
+                                        <input type="text" placeholder="Title" class="form-control">
+                                   </div>
+                                </div-->
+                                <!--div class="multiple-ques-wrapper ">
+                                    <div class=" form-group pt-3 pb-2 d-flex  align-items-center position-relative">
+                                       
+                                        <div class="multi-ques-item position-relative">
+                                                <span class="position-absolute multi-dlt"><i class="fa fa-times "></i></span>
+                                            <div class="w-100 h-100 bg-grad justify-content-center d-flex align-items-center">
+                                                <h5 class="text-white ">question 1</h5>
+                                            </div>
+                                        </div>
+                                      
+                                        <div class="multi-ques-item position-relative active ">
+                                                <span class="position-absolute multi-dlt"><i class="fa fa-times "></i></span>
+                                                <div class="w-100 h-100 bg-grad justify-content-center d-flex align-items-center">
+                                                    <h5 class="text-white ">question 2</h5>
+                                                </div>
+                                            </div>
+                                            <div class="multi-ques-item position-relative">
+                                                <span class="position-absolute multi-dlt"><i class="fa fa-times "></i></span>
+                                                    <div class="w-100 h-100 bg-grad justify-content-center d-flex align-items-center">
+                                                        <h5 class="text-white ">question 3</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="multi-ques-item position-relative ">
+                                                        <span class="position-absolute multi-dlt"><i class="fa fa-times "></i></span>
+                                                        <div class="w-100 h-100 bg-grad justify-content-center d-flex align-items-center">
+                                                            <h5 class="text-white ">question 4</h5>
+                                                        </div>
+                                                    </div>
+                                                    <span class="position-absolute multi-add"> <i class="fa fa-plus"></i></span>
+                                                   
+                                    </div>
+                                </div-->
+        
+                                <div class="write-ques-wrapper ">
+                                        <div class="form-group position-relative write-ques-inner">
+                                             <input type="text" readonly name="question" value="{{quizDetail.question}}" placeholder="write your question here..." class="form-control" />
+                                              
+                                        </div>
+                                     </div>
+                                   
+                                     <div formArrayName="option_data"  class="answers-wrapper bg-white p-4 rounded border-dashed">
+                                         <div *ngFor="let options of options; let i=index " class="form-group">
+                                             <div  class="add-answer-wrapper position-relative">
+                                                 <div >
+                                                 <input type="text" readonly  name="option" class="form-control" value="{{options.options}}" placeholder="Answer {{i+1}}">
+                                                </div>
+                                               
+                                                      <span class="ans-counting position-absolute">{{i+1}}</span>
+                                                    
+                                             </div>
+                                         </div>
+        
+                                          
+                                         </div>
+                                
+                            </div>
+                       
+                        <div class="col-md-12">
+                            <hr>
+                        </div>
+                      
+                        </div>
+                    </div>
+                
+    </div>
+
+</section>
